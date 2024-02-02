@@ -23,5 +23,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index,name='home'),
     path('contact/',views.getcontact,name='contact'),
-    path('get_weather/',views.get_weather,name="get_weather")
+    path('get_weather/',views.get_weather,name="get_weather"),
+    path('display/',views.display,name="display"),
 ]

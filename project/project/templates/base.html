@@ -13,24 +13,29 @@
     --navbar-height:59px;
 }
 
+body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            overflow-x:hidden;
+        }
+
 #navbar{
     display:flex;
     align-items: center;
     position:relative;
     /* top:0; */
-    width:100%;
+    width:100vw;
+    height:40px;
     /* justify-content: center; */
 }
 
-#logo{
-    margin: 34px 45px;
 
-}
 
-#logo img{
-height:5rem;
-margin:-33px -23px;
-}
+
 
 /* #navbar{ */
     /* position:absolute;
@@ -83,6 +88,24 @@ margin:-33px -23px;
     display:flex;
     justify-content: center;
 }
+
+
+        main {
+            flex: 1;
+            padding-left: 0px; /* Adjust this value based on your design */
+            padding-right: 0px; /* Adjust this value based on your design */
+        } 
+
+footer {
+            width: 100%;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+
 {% block css %} {% endblock %}
     </style>
 
@@ -91,23 +114,35 @@ margin:-33px -23px;
     <title>My Random Quotes</title>
 </head>
 <body>
-    <div class="title">Welcome to random quotes</div>
+    <main>
+        <!-- Your dynamic page content goes here -->
+    <div class="title">Welcome to Weather Webapp.</div>
 
     <nav id="navbar">
-        <div id="logo">
+        <!-- <div id="logo">
             <img src="logo.jpeg" alt="Logo">
-        </div>
+        </div> -->
         <ul>
             <li class="item"><a href="{% url 'home' %}">Home</a></li>
             <!-- <li class="item"><a href="#">Services</a></li>
             <li class="item"><a href="#">About Us</a></li> -->
             <li class="item"><a href="/contact">Contact US</a></li>
+            <li class="item"><a href="/display">Display</a></li>
         </ul>
     </nav>
 
-    
-    
     {% block body %}   {% endblock %}
+
+    </main>
+
+    <footer>
+        <p>Contact Information:</p>
+        <p>Email: info@example.com</p>
+        <p>Phone: +1 123-456-7890</p>
+    </footer>
+
+    
+    
 </body>
 </html>
 

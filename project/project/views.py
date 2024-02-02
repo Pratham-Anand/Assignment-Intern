@@ -3,6 +3,7 @@ from django.shortcuts import render,redirect
 import requests
 from .forms import ContactForm
 from django.contrib import messages
+from .models import Contact
 
 def index(request):
     return render(request, 'index.html')
@@ -54,6 +55,11 @@ def getcontact(request):
         form = ContactForm()
 
     return render(request, 'contact.html', {'form': form})
+
+
+def display(request):
+     contacts = Contact.objects.all()
+     return render(request, 'display.html', {'contacts': contacts})
 
 
 

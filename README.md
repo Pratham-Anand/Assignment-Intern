@@ -1,6 +1,6 @@
 # Project Title
 
-Short description or tagline about your project.
+This project is a basic webapp built for a assignent purpose.
 
 ## Table of Contents
 
@@ -13,17 +13,19 @@ Short description or tagline about your project.
 
 ## About
 
-Provide a more detailed description of your project. Explain what it does, why it's useful, and any key features.
+This is a webapp that displays current weather stats for a city.User can type the city name for which they want to see the weather.
 
 ## Features
 
-- List key features or functionalities of your project.
+- Fetch data (GET request) from OpenWeather API.
+- Post details like  name,email,description through a form and display in the website.
+- Storing the POST details in django SQLite database.
 
 ## Getting Started
 
 ### Prerequisites
 
-- List any prerequisites or dependencies users need to install before using your project.
+- Knowledge of models,basic routing in django and MVT architecture.
 
 ### Installation
 

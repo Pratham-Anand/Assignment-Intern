@@ -1,0 +1,32 @@
+<!-- create_customer.html -->
+{% extends 'index.html' %}
+
+
+
+
+{% block body %}
+  <h2>Contact Us</h2>
+  <form method="post" action="{% url 'contact' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+  </form>
+
+  {% if messages %}
+  <ul class="messages">
+    {% for message in messages %}
+      <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+  </ul>
+
+  <script>
+    // Display the success message for 3 seconds
+    setTimeout(function() {
+      var successMessage = document.querySelector('.success-alert');
+      if (successMessage) {
+        successMessage.style.display = 'none';
+      }
+    }, 3000);
+  </script>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+    <div >Get Current Weather</div>
+
+    <form method="POST" action="{% url 'get_weather' %}">
+        {% csrf_token %}
+        <label for="city_name">Enter city name:</label>
+        <input type="text" id="city_name" name="city_name" required>
+        <button type="submit">Get Weather</button>
+    </form>
+
+        {% if weather_data %}
+            <h2>Weather Information for {{ city_name }}</h2>
+            <p>Temperature: {{ weather_data.current_temperature }} Kelvin</p>
+            <p>Atmospheric Pressure: {{ weather_data.current_pressure }} hPa</p>
+            <p>Humidity: {{ weather_data.current_humidity }}%</p>
+            <p>Description: {{ weather_data.weather_description }}</p>
+        {% endif %}
+
+    
+        {% if weather_data.error %}
+            <p>{{ weather_data.error }}</p>
+        {% endif %}
+
+        <!-- {% for data in weather_data %}
+            <p>DATA:{{data.current_temperature}}</p>
+        {% endfor %}
+         -->
+    {% endblock %}
+

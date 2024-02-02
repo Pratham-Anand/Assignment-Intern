@@ -2,8 +2,14 @@ from django.http import HttpResponse
 from django.shortcuts import render,redirect
 import requests
 from .forms import ContactForm
+import os
 from django.contrib import messages
 from .models import Contact
+
+from dotenv import load_dotenv  # type: ignore
+
+# Load environment variables from .env
+load_dotenv()
 
 def index(request):
     return render(request, 'index.html')
@@ -12,7 +18,7 @@ def get_weather(request):
     city_name = request.POST.get('city_name')
 
     if request.method == 'POST' and city_name:
-        api_key = "6f5d5df1c61bc00f5d13ef4b3035076a"
+        api_key = os.getenv('api_key')
         base_url = "http://api.openweathermap.org/data/2.5/weather?"
         complete_url = base_url + "appid=" + api_key + "&q=" + city_name
         url = f"http://api.openweathermap.org/data/2.5/weather?q={city_name}&appid={api_key}"

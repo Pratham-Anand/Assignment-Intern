@@ -29,14 +29,14 @@ This is a webapp that displays current weather stats for a city.User can type th
 
 ### Installation
 
-Step-by-step guide on how to install your project:-
--git clone https://github.com/your-username/your-repo.git
--cd (myrepo)
--python -m venv venv
--source venv/bin/activate  # On macOS/Linux
--venv\Scripts\activate  # On Windows
--pip install -r requirements.txt
--python manage.py migrate
+- Step-by-step guide on how to install your project:-
+- git clone https://github.com/your-username/your-repo.git
+- cd (myrepo)
+- python -m venv venv
+- source venv/bin/activate  # On macOS/Linux
+- venv\Scripts\activate  # On Windows
+- pip install -r requirements.txt
+- python manage.py migrate
 
 
 

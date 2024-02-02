@@ -1,6 +1,6 @@
 # Project Title
 
-This project is a basic webapp built for a assignent purpose.
+This project is a basic webapp built for a assignment purpose.
 
 ## Table of Contents
 
@@ -29,31 +29,15 @@ This is a webapp that displays current weather stats for a city.User can type th
 
 ### Installation
 
-1. Step-by-step guide on how to install your project.
+ Step-by-step guide on how to install your project:-
+git clone https://github.com/your-username/your-repo.git
+cd (myrepo)
+python -m venv venv
+source venv/bin/activate  # On macOS/Linux
+venv\Scripts\activate  # On Windows
+pip install -r requirements.txt
+python manage.py migrate
 
-## Usage
 
-Show examples and provide instructions on how to use your project. Include code snippets if necessary.
-
-## Contributing
-
-Explain how others can contribute to your project. Include guidelines for submitting issues or pull requests.
-
-## License
-
-This project is licensed under the [Your License Name](LICENSE) - Mention the type of license you choose.
-
-## Acknowledgments
-
-- Any credits or acknowledgments for libraries, frameworks, or tutorials you used.
-- You can also thank contributors here.
-
-## Support
-
-If you have any questions or need help, contact: your-email@example.com
-
-## Project Status
-
-Mention the current status of your project - whether it's in development, stable, or inactive.
 
 
